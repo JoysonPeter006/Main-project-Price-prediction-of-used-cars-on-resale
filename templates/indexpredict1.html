@@ -1,0 +1,169 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<title>Product Order Form Flat Responsive widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Product Order Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- fonts  -->
+<link href="//fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
+<!-- /fonts -->
+<!-- css -->
+<link href="../static/css1/style.css" rel='stylesheet' type='text/css' media="all" /> 
+<!-- /css -->
+</head>
+<body>
+<h1 class="header-agileits w3layouts w3 w3l w3ls">Predictive analysis</h1>
+<div class="content-w3ls agileits agileinfo wthree">
+	<form action="{{ url_for('predict')}}" method="post">
+		<div class="form-wthree1 agileits agileinfo wthree">
+		
+			<div class="form-control"> 
+				<label class="header">Year(between 1999-2022)<span>:</span></label>
+				<input type="text" id="Year" name="Year" placeholder="Input between 1990 and 2022" title="Input between 1990 and 2022" required="">
+			</div>
+			
+			<div class="form-control">	
+				<label class="header">Car company <span>:</span></label>
+				<select id="car_name" name="car_name" required="required">
+					<option value="Maruti">Maruti</option>
+					<option value="Skoda">Skoda</option>
+					<option value="Honda">Honda</option>
+					<option value="Hyundai">Hyundai</option>
+					<option value="Toyota">Toyota</option>
+					<option value="Ford">Ford</option>
+					<option value="Renault">Renault</option>
+					<option value="Mahindra">Mahindra</option>
+					<option value="Tata">Tata</option>
+					<option value="Chevrolet">Chevrolet</option>
+					<option value="Datsun">Datsun</option>
+					<option value="Volkswagen">Volkswagen</option>
+					<option value="Nissan">Nissan</option>
+					<option value="Daewoo">Daewoo</option>
+					<option value="Kia">Kia</option>
+					<option value="Fiat">Fiat</option>
+					<option value="Other">Other</option>
+					<option value="Opel">Opel</option></select>
+			</div>
+			
+			<div class="form-control">	
+				<label class="header">Kilometers Drived(Km): <span>:</span></label>	
+				<input id="Kms_Driven" name="Kms_Driven" title="In km" required="">
+			</div>
+		
+		</div>
+		
+		<div class="form-wthree2 w3-agileits agileits-w3layouts agile">
+			
+			<div class="form-control"> 
+				<label class="header">Mileage(In Kmpl) <span>:</span></label>
+				<input type="text" id="Mileage" name="Mileage" title="In kmpl" required="">
+			</div>
+			<div class="form-control"> 
+				<label class="header">Engine(CC) <span>:</span></label>
+				<input id="Engine" name="Engine" title="In CC" required="">
+			</div>
+			<div class="form-control"> 
+				<label class="header">Maximum Power(In bhp) <span>:</span></label>
+				<input id="Max_power" name="Max_power" title="In bhp" required="">
+			</div>
+		
+		</div>
+		<div class="clear"></div>
+		
+		<div class="form-control1"> 
+			<label class="header">Number of Seats <span>:</span></label><select name="Seats" id="Seats" required="required">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+		</div>
+			
+		<div class="form-control2"> 
+			<label class="header">What Is the Fuel type? <span>:</span></label>
+			<select name="Fuel_Type" id="Fuel_Type" required="required">
+                <option value="CNG">CNG</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="LPG">LPG</option>
+            </select>
+		</div>
+		
+		<div class="form-wthree3 w3-agileits agileits-w3layouts agile">
+			<div class="form-control"> 
+				<label class="header">Are you A Dealer or Individual <span>:</span></label><select name="Seller_Type_Individual" id="Seller_Type_Individual" required="required">
+					<option value="Dealer">Dealer</option>
+					<option value="Individual">Individual</option>
+					<option value="Trustmark_dealer">Trustmark_dealer</option>
+				</select>
+			</div>
+		
+			<div class="form-control"> 
+				<label class="header">Transmission type <span>:</span></label>
+				<select name="Transmission_Manual" id="Transmission_Manual" required="required">
+					<option value="Manual">Manual Car</option>
+					<option value="Automatic">Automatic Car</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="form-wthree4 w3-agile w3-agileits agileits-w3layouts">
+			<div class="form-control"> 
+				<label class="header">Number of owners <span>:</span></label><select name="Owner" id="Owner" required="required">
+					<option value="First owner">First owner</option>
+					<option value="Test Drive Car">Test Drive Car</option>
+					<option value="Second owner">Second owner</option>
+					<option value="Third Owner">Third Owner</option>
+					<option value="Fourth and above">Fourth and above</option>
+					
+				</select>
+			</div>
+			<!--
+			<div class="form-control"> 
+				<label class="header">Read Buyers and sellers guide<span>:</span></label><br><br>
+				<a target="_blank" class="fcc-btn" href="indexfinal">Read Guide</a> 	
+			</div>-->
+		</div>
+		<div class="clear"></div>
+		
+		<div class="form-control last">
+			<input id="sub" type="submit" class="register" value="Calculate price">
+			<a class="reset" href="http://127.0.0.1:5000"><center><br>Go to home</center></a></div>
+			<div class="clear"></div>
+			<div class="last"><center><br><br><big><h1>{{ prediction_text }}</h1></big></center></div>
+			<div class="last2"><center><br><br><big><h1>Read Buyers and sellers guide<br><br>
+				<a target="_blank" class="fcc-btn" href="indexfinal">Read Guide</a> </h1></big></center></div>
+		</div>
+	</form>
+</div>
+</body>
+<style>
+	.fcc-btn {
+  background-color: #199319;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+.last{
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bolder;
+}
+.last2{
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bolder;
+	color: rgb(242, 238, 238);
+}
+</style>
+</html>

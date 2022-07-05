@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body></img src="../static/images/car.jpg">
+    <div style="color:white">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>Year(Input between 1990 and 2022)</h3>
+            <input id="Year" name="Year">
+            <h3>Car company</h3>
+            <select id="car_name" name="car_name" required="required">
+                <option value="Maruti">Maruti</option>
+                <option value="Skoda">Skoda</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Ford">Ford</option>
+                <option value="Renault">Renault</option>
+                <option value="Mahindra">Mahindra</option>
+                <option value="Tata">Tata</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Datsun">Datsun</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Daewoo">Daewoo</option>
+                <option value="Kia">Kia</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Other">Other</option>
+                <option value="Opel">Opel</option></select>
+            <h3>How Many Kilometers Drived?(in km)</h3><input id="Kms_Driven" name="Kms_Driven" required="required">
+            <h3>How Much Mileage?(In kmpl)</h3><input id="Mileage" name="Mileage" required="required">
+            <h3>Engine(CC)</h3><input id="Engine" name="Engine" required="required">
+            <h3>Maximum Power?(In bhp)</h3><br><input id="Max_power" name="Max_power" required="required">
+            <h3>Number of Seats</h3><select name="Seats" id="Seats" required="required">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+            <h3>What Is the Fuel type?</h3><br><select name="Fuel_Type" id="Fuel_Type" required="required">
+                <option value="CNG">CNG</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="LPG">LPG</option>
+            </select>
+            <h3>Are you A Dealer or Individual</h3><br><select name="Seller_Type_Individual" id="Seller_Type_Individual" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+                <option value="Trustmark_dealer">Trustmark_dealer</option>
+            </select>
+            <h3>Transmission type</h3><br><select name="Transmission_Manual" id="Transmission_Manual" required="required">
+                <option value="Manual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+            <h3>owner</h3><br><select name="Owner" id="Owner" required="required">
+                <option value="First owner">First owner</option>
+                <option value="Test Drive Car">Test Drive Car</option>
+                <option value="Second owner">Second owner</option>
+                <option value="Third Owner">Third Owner</option>
+                <option value="Fourth and above">Fourth and above</option>
+                
+            </select>
+            
+            <br><br>
+            <br><br>
+            <button id="sub" type="submit">Calculate Price</button>
+            <br><br>
+            <br><br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: rgba(17, 17, 17, 0.792);
+            background-image: url("../static/images/carcar.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
+
